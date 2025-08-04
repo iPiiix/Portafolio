@@ -3,125 +3,144 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ArqWeb</title>
+  <title>ByteArc</title>
   <link rel="stylesheet" href="estilohome.css" />
+  <link rel="icon" type="image/png" href="Black and Grey Clean Modern Minimalist Creative Technology Logo.png" />
 </head>
- <div class="bg-elements">
-    <div class="bg-line" style="width: 1px; height: 100px; top: 15%; left: 5%; animation-delay: 0s;"></div>
-    <div class="bg-line" style="width: 1px; height: 80px; top: 45%; right: 8%; animation-delay: 3s;"></div>
-    <div class="bg-line" style="width: 60px; height: 1px; top: 70%; left: 15%; animation-delay: 6s;"></div>
-    <div class="bg-line" style="width: 40px; height: 1px; top: 25%; right: 20%; animation-delay: 2s;"></div>
+<body>
+  <!-- PANTALLA DE CARGA -->
+  <div class="loading-screen" id="loadingScreen">
+    <img src="Black and Grey Clean Modern Minimalist Creative Technology Logo.png" alt="ByteArc Logo" class="loading-logo">
+    <div class="loading-text">ByteArc</div>
+    <div class="loading-bar-container">
+      <div class="loading-bar"></div>
+    </div>
   </div>
 
-  <header>
-    <h1>iPix</h1>
-    <p class="subtitulo">Desarrollador en formación · Especialista en bases de datos</p>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="#sobre-mi">Sobre mí</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-
-  <section id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <p>
-      Soy Santi Pérez Guerrero, estudiante de Desarrollo de Aplicaciones Multiplataforma 
-      con una pasión especial por las bases de datos, la estética del código y la excelencia técnica. 
-      Mi objetivo es combinar funcionalidad y diseño para crear soluciones digitales elegantes y eficientes. 
-      Planeo especializarme en IA y Big Data o Ciberseguridad, siempre con el propósito de triunfar 
-      y destacar en el mundo del desarrollo.
-    </p>
-  </section>
-
-  <section id="proyectos">
-    <h2>Proyectos</h2>
-    <div class="proyectos-grid">
-      <div class="proyecto">
-        <h3>Sistema de Reservas [En desarrollo - 2026]</h3>
-        <p>
-          Plataforma web completa para gestión de reservas con base de datos integrada. 
-          Incluirá funcionalidades CRUD avanzadas, interfaz de usuario intuitiva y 
-          arquitectura escalable. Será mi proyecto principal para demostrar mis 
-          habilidades en desarrollo full-stack y diseño de bases de datos.
-        </p>
-      </div>
-      <div class="proyecto">
-        <h3>Portfolio Personal</h3>
-        <p>
-          Sitio web personal desarrollado con enfoque minimalista y profesional. 
-          Implementado con HTML5, CSS3 y JavaScript vanilla, priorizando la 
-          performance y la experiencia de usuario. Diseño responsive y accesible.
-        </p>
-      </div>
-      <div class="proyecto">
-        <h3>Proyectos Académicos DAM</h3>
-        <p>
-          Diversos ejercicios y proyectos desarrollados durante la formación en DAM, 
-          incluyendo aplicaciones en Java, diseño de bases de datos relacionales y 
-          desarrollo de interfaces de usuario. Enfoque en buenas prácticas y código limpio.
-        </p>
-        <a href="https://github.com/iPiiix" class="proyecto-link" target="_blank">Ver repositorio →</a>
-      </div>
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="main-content" id="mainContent">
+    <!-- Elementos de fondo minimalistas -->
+    <div class="bg-elements">
+      <div class="bg-line" style="width: 1px; height: 100px; top: 15%; left: 5%; animation-delay: 0s;"></div>
+      <div class="bg-line" style="width: 1px; height: 80px; top: 45%; right: 8%; animation-delay: 3s;"></div>
+      <div class="bg-line" style="width: 60px; height: 1px; top: 70%; left: 15%; animation-delay: 6s;"></div>
+      <div class="bg-line" style="width: 40px; height: 1px; top: 25%; right: 20%; animation-delay: 2s;"></div>
     </div>
-  </section>
 
-  <section id="habilidades">
-    <h2>Habilidades</h2>
-    <div class="habilidades-grid">
-      <div class="habilidad">
-        <div class="habilidad-nombre">Java</div>
-        <div class="habilidad-nivel">Intermedio → Avanzado</div>
+    <header>
+      <div class="header-content">
+        <img src="Black and Grey Clean Modern Minimalist Creative Technology Logo.png" alt="ByteArc Logo" class="logo">
+        <h1>ByteArc</h1>
+        <p class="subtitulo">Developer</p>
       </div>
-      <div class="habilidad">
-        <div class="habilidad-nombre">SQL</div>
-        <div class="habilidad-nivel">Intermedio → Avanzado</div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>
+        Soy Santi Pérez Guerrero, estudiante de Desarrollo de Aplicaciones Multiplataforma 
+        con una pasión especial por las bases de datos, la estética del código y la excelencia técnica. 
+        Mi objetivo es combinar funcionalidad y diseño para crear soluciones digitales elegantes y eficientes. 
+        Planeo especializarme en IA y Big Data o Ciberseguridad, siempre con el propósito de triunfar 
+        y destacar en el mundo del desarrollo.
+      </p>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+      <div class="proyectos-grid">
+        <div class="proyecto">
+          <h3>Sistema de Reservas [En desarrollo - 2026]</h3>
+          <p>
+            Plataforma web completa para gestión de reservas con base de datos integrada. 
+            Incluirá funcionalidades CRUD avanzadas, interfaz de usuario intuitiva y 
+            arquitectura escalable. Será mi proyecto principal para demostrar mis 
+            habilidades en desarrollo full-stack y diseño de bases de datos.
+          </p>
+        </div>
+        <div class="proyecto">
+          <h3>Portfolio Personal</h3>
+          <p>
+            Sitio web personal desarrollado con enfoque minimalista y profesional. 
+            Implementado con HTML5, CSS3 y JavaScript vanilla, priorizando la 
+            performance y la experiencia de usuario. Diseño responsive y accesible.
+          </p>
+        </div>
+        <div class="proyecto">
+          <h3>Proyectos Académicos DAM</h3>
+          <p>
+            Diversos ejercicios y proyectos desarrollados durante la formación en DAM, 
+            incluyendo aplicaciones en Java, diseño de bases de datos relacionales y 
+            desarrollo de interfaces de usuario. Enfoque en buenas prácticas y código limpio.
+          </p>
+          <a href="https://github.com/iPiiix" class="proyecto-link" target="_blank">Ver repositorio →</a>
+        </div>
       </div>
-      <div class="habilidad">
-        <div class="habilidad-nombre">HTML5 & CSS3</div>
-        <div class="habilidad-nivel">Intermedio</div>
+    </section>
+
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <div class="habilidades-grid">
+        <div class="habilidad">
+          <div class="habilidad-nombre">Java</div>
+          <div class="habilidad-nivel">Avanzado</div>
+        </div>
+        <div class="habilidad">
+          <div class="habilidad-nombre">SQL</div>
+          <div class="habilidad-nivel">Avanzado</div>
+        </div>
+        <div class="habilidad">
+          <div class="habilidad-nombre">HTML5 & CSS3</div>
+          <div class="habilidad-nivel">Intermedio</div>
+        </div>
+        <div class="habilidad">
+          <div class="habilidad-nombre">JavaScript</div>
+          <div class="habilidad-nivel">Intermedio</div>
+        </div>
+        <div class="habilidad">
+          <div class="habilidad-nombre">Bases de Datos</div>
+          <div class="habilidad-nivel">Avanzado</div>
+        </div>
+        <div class="habilidad">
+          <div class="habilidad-nombre">Git & GitHub</div>
+          <div class="habilidad-nivel">Intermedio</div>
+        </div>
+        <div class="habilidad">
+          <div class="habilidad-nombre">Debugging</div>
+          <div class="habilidad-nivel">Intermedio</div>
+        </div>
+        <div class="habilidad">
+          <div class="habilidad-nombre">Diseño Responsivo</div>
+          <div class="habilidad-nivel">Intermedio</div>
+        </div>
       </div>
-      <div class="habilidad">
-        <div class="habilidad-nombre">JavaScript</div>
-        <div class="habilidad-nivel">Intermedio</div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Conecta conmigo para colaboraciones y oportunidades profesionales</p>
+      <div class="contacto-links">
+        <a href="mailto:santiperezguerrero2005@gmail.com" class="contacto-link">
+          santiperezguerrero2005@gmail.com
+        </a>
+        <a href="https://github.com/iPiiix" class="contacto-link" target="_blank">
+          GitHub: iPiiix
+        </a>
       </div>
-      <div class="habilidad">
-        <div class="habilidad-nombre">Bases de Datos</div>
-        <div class="habilidad-nivel">Especialización</div>
-      </div>
-      <div class="habilidad">
-        <div class="habilidad-nombre">Git & GitHub</div>
-        <div class="habilidad-nivel">Intermedio</div>
-      </div>
-      <div class="habilidad">
-        <div class="habilidad-nombre">Debugging</div>
-        <div class="habilidad-nivel">Intermedio</div>
-      </div>
-      <div class="habilidad">
-        <div class="habilidad-nombre">Diseño Responsivo</div>
-        <div class="habilidad-nivel">Intermedio</div>
-      </div>
+    </section>
+
+      <footer>
+        <p>© 2025 By ByteArc. All right reserveds</p>
+      </footer>
     </div>
-  </section>
-
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Conecta conmigo para colaboraciones y oportunidades profesionales</p>
-    <div class="contacto-links">
-      <a href="mailto:santiperezguerrero2005@gmail.com" class="contacto-link">
-        santiperezguerrero2005@gmail.com
-      </a>
-      <a href="https://github.com/iPiiix" class="contacto-link" target="_blank">
-        GitHub: iPiiix
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Santi Pérez Guerrero (iPix). Diseñado con precisión y minimalismo.</p>
-  </footer>
-</html>
+  </body>
+  </html>
