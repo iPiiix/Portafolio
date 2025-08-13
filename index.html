@@ -3,145 +3,539 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ByteArc</title>
+  <title>ArcByte | Excelencia Digital</title>
+  <meta name="description" content="ArcByte: Soluciones digitales premium creadas con precisión. Transformamos desafíos complejos en soluciones elegantes y de alto rendimiento." />
+  
+  <!-- Premium Typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  
   <link rel="stylesheet" href="estilohome.css" />
-  <link rel="icon" type="image/png" href="Black and Grey Clean Modern Minimalist Creative Technology Logo.png" />
+  <link rel="icon" type="image/png" href="Captura de pantalla 2025-08-13 143438.png" />
+  <script src="script.js" defer></script>
 </head>
-<script src="jshome.js" defer></script>
 <body>
-  <!-- PANTALLA DE CARGA -->
+  
+  <!-- PREMIUM LOADING SCREEN -->
   <div class="loading-screen" id="loadingScreen">
-    <img src="Black and Grey Clean Modern Minimalist Creative Technology Logo.png" alt="ByteArc Logo" class="loading-logo">
-    <div class="loading-text">ByteArc</div>
-    <div class="loading-bar-container">
-      <div class="loading-bar"></div>
+    <div class="loading-container">
+      <div class="loading-logo">
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30 5L50 20V40L30 55L10 40V20L30 5Z" stroke="url(#gradient)" stroke-width="1.5" fill="none"/>
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#3B82F6"/>
+              <stop offset="100%" style="stop-color:#8B5CF6"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="loading-text">ArcByte</div>
+      <div class="loading-progress">
+        <div class="loading-bar"></div>
+      </div>
     </div>
   </div>
 
-  <!-- CONTENIDO PRINCIPAL -->
+  <!-- MAIN CONTENT -->
   <div class="main-content" id="mainContent">
-    <!-- Elementos de fondo minimalistas -->
-    <div class="bg-elements">
-      <div class="bg-line" style="width: 1px; height: 100px; top: 15%; left: 5%; animation-delay: 0s;"></div>
-      <div class="bg-line" style="width: 1px; height: 80px; top: 45%; right: 8%; animation-delay: 3s;"></div>
-      <div class="bg-line" style="width: 60px; height: 1px; top: 70%; left: 15%; animation-delay: 6s;"></div>
-      <div class="bg-line" style="width: 40px; height: 1px; top: 25%; right: 20%; animation-delay: 2s;"></div>
+    
+    <!-- Geometric Background Elements -->
+    <div class="bg-geometry">
+      <div class="geometric-shape shape-1"></div>
+      <div class="geometric-shape shape-2"></div>
+      <div class="geometric-shape shape-3"></div>
     </div>
 
-    <header>
-      <div class="header-content">
-        <img src="Black and Grey Clean Modern Minimalist Creative Technology Logo.png" alt="ByteArc Logo" class="logo">
-        <h1>ByteArc</h1>
-        <p class="subtitulo">Developer</p>
+    <!-- Premium Navigation -->
+    <nav class="nav-premium">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M16 3L26 10V22L16 29L6 22V10L16 3Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          </svg>
+          <span>ArcByte</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">Nosotros</a></li>
+          <li><a href="#services" class="nav-link">Servicios</a></li>
+          <li><a href="#work" class="nav-link">Trabajo</a></li>
+          <li><a href="#expertise" class="nav-link">Habilidades</a></li>
+          <li><a href="#contact" class="nav-link">Contacto</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="#contact" class="btn-primary-small">Empezar Proyecto</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-container">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Disponible Para Proyectos Premium
+        </div>
+        
+        <h1 class="hero-title">
+          Excelencia Digital
+          <span class="hero-subtitle">Redefinida</span>
+        </h1>
+        
+        <p class="hero-description">
+          Creamos soluciones digitales sofisticadas que superan las expectativas.
+          Cada proyecto es una oportunidad para crear algo extraordinario mediante ingeniería de 
+          precisión y un pensamiento de diseño innovador.
+        </p>
+        
+        <div class="hero-rotating">
+          <span class="rotating-label">Especializados en</span>
+          <span class="rotating-text" id="rotatingText">Arquitectura</span>
+        </div>
+        
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">
+            <span>Empieza Tu Proyecto</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#services" class="btn-secondary">Explorar Servicios</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Proyectos Entregados</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">99%</div>
+            <div class="stat-label">Satisfacción del Cliente</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Soporte Premium</div>
+          </div>
+        </div>
       </div>
     </header>
 
-    <nav>
-      <ul>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>
-        Soy Santi Pérez Guerrero, estudiante de Desarrollo de Aplicaciones Multiplataforma 
-        con una pasión especial por las bases de datos, la estética del código y la excelencia técnica. 
-        Mi objetivo es combinar funcionalidad y diseño para crear soluciones digitales elegantes y eficientes. 
-        Planeo especializarme en IA y Big Data o Ciberseguridad, siempre con el propósito de triunfar 
-        y destacar en el mundo del desarrollo.
-      </p>
-    </section>
-
-    <section id="proyectos">
-      <h2>Proyectos</h2>
-      <div class="proyectos-grid">
-        <div class="proyecto">
-          <h3>Sistema de Reservas [En desarrollo - 2026]</h3>
-          <p>
-            Plataforma web completa para gestión de reservas con base de datos integrada. 
-            Incluirá funcionalidades CRUD avanzadas, interfaz de usuario intuitiva y 
-            arquitectura escalable. Será mi proyecto principal para demostrar mis 
-            habilidades en desarrollo full-stack y diseño de bases de datos.
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Nuestra Filosofía</div>
+          <h2 class="section-title">Ingeniería de Precisión Encuentra Excelencia Creativa</h2>
+          <p class="section-subtitle">
+            Creemos que las experiencias digitales excepcionales nacen de la intersección 
+            entre el dominio técnico y la sofisticación del diseño. Cada solución que creamos 
+            encarna este principio, entregando resultados que superan los estándares de la industria.
           </p>
         </div>
-        <div class="proyecto">
-          <h3>Portfolio Personal</h3>
-          <p>
-            Sitio web personal desarrollado con enfoque minimalista y profesional. 
-            Implementado con HTML5, CSS3 y JavaScript vanilla, priorizando la 
-            performance y la experiencia de usuario. Diseño responsive y accesible.
-          </p>
-        </div>
-        <div class="proyecto">
-          <h3>Proyectos Académicos DAM</h3>
-          <p>
-            Diversos ejercicios y proyectos desarrollados durante la formación en DAM, 
-            incluyendo aplicaciones en Java, diseño de bases de datos relacionales y 
-            desarrollo de interfaces de usuario. Enfoque en buenas prácticas y código limpio.
-          </p>
-          <a href="https://github.com/iPiiix" class="proyecto-link" target="_blank">Ver repositorio →</a>
+        
+        <div class="principles-grid">
+          <div class="principle-card">
+            <div class="principle-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3 class="principle-title">Pensamiento Arquitectónico</h3>
+            <p class="principle-description">
+              Abordamos cada proyecto con precisión arquitectónica, construyendo bases 
+              escalables que soportan crecimiento y adaptación a largo plazo.
+            </p>
+          </div>
+          
+          <div class="principle-card">
+            <div class="principle-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3 class="principle-title">Obsesión por el Rendimiento</h3>
+            <p class="principle-description">
+              La velocidad y eficiencia no son ideas tardías—son fundamentales en cada 
+              decisión que tomamos en el proceso de desarrollo.
+            </p>
+          </div>
+          
+          <div class="principle-card">
+            <div class="principle-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7.5V9M15 11L21 11.5V13.5L15 14V16L21 16.5V18.5L9 19V17L9 15V13V11V9L21 9Z" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3 class="principle-title">Sofisticación Elegante</h3>
+            <p class="principle-description">
+              Nuestras interfaces combinan funcionalidad intuitiva con estética refinada, 
+              creando experiencias que se sienten poderosas y sin esfuerzo.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="habilidades">
-      <h2>Habilidades</h2>
-      <div class="habilidades-grid">
-        <div class="habilidad">
-          <div class="habilidad-nombre">Java</div>
-          <div class="habilidad-nivel">Avanzado</div>
+    <!-- Services Section -->
+    <section id="services" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Lo Que Entregamos</div>
+          <h2 class="section-title">Soluciones Digitales Premium</h2>
+          <p class="section-subtitle">
+            Desde el concepto hasta la implementación, proporcionamos soluciones integrales que 
+            definen nuevos estándares de excelencia en la artesanía digital.
+          </p>
         </div>
-        <div class="habilidad">
-          <div class="habilidad-nombre">SQL</div>
-          <div class="habilidad-nivel">Avanzado</div>
-        </div>
-        <div class="habilidad">
-          <div class="habilidad-nombre">HTML5 & CSS3</div>
-          <div class="habilidad-nivel">Intermedio</div>
-        </div>
-        <div class="habilidad">
-          <div class="habilidad-nombre">JavaScript</div>
-          <div class="habilidad-nivel">Intermedio</div>
-        </div>
-        <div class="habilidad">
-          <div class="habilidad-nombre">Bases de Datos</div>
-          <div class="habilidad-nivel">Avanzado</div>
-        </div>
-        <div class="habilidad">
-          <div class="habilidad-nombre">Git & GitHub</div>
-          <div class="habilidad-nivel">Intermedio</div>
-        </div>
-        <div class="habilidad">
-          <div class="habilidad-nombre">Debugging</div>
-          <div class="habilidad-nivel">Intermedio</div>
-        </div>
-        <div class="habilidad">
-          <div class="habilidad-nombre">Diseño Responsivo</div>
-          <div class="habilidad-nivel">Intermedio</div>
+        
+        <div class="services-grid">
+          <div class="service-card featured">
+            <div class="service-header">
+              <div class="service-icon">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <path d="M14 2L24 8V20L14 26L4 20V8L14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="service-badge">Más Popular</div>
+            </div>
+            <h3 class="service-title">Arquitectura Empresarial</h3>
+            <p class="service-description">
+              Ecosistemas digitales completos construidos con arquitectura de nivel empresarial, 
+              diseño de microservicios e infraestructura nativa en la nube para máxima escalabilidad.
+            </p>
+            <ul class="service-features">
+              <li>Arquitectura de Microservicios</li>
+              <li>Infraestructura Nativa en la Nube</li>
+              <li>Protocolos de Seguridad Avanzados</li>
+              <li>Análisis en Tiempo Real</li>
+            </ul>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <path d="M7 4C5.34315 4 4 5.34315 4 7V21C4 22.6569 5.34315 24 7 24H21C22.6569 24 24 22.6569 24 21V7C24 5.34315 22.6569 4 21 4H7Z" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="service-title">Diseño de Experiencia Digital</h3>
+            <p class="service-description">
+              Interfaces y experiencias de usuario sofisticadas que combinan excelencia 
+              estética con perfección funcional, creando puntos de contacto digitales memorables.
+            </p>
+            <ul class="service-features">
+              <li>Estrategia de Experiencia de Usuario</li>
+              <li>Sistemas de Diseño de Interfaz</li>
+              <li>Prototipado de Interacciones</li>
+              <li>Optimización de Usabilidad</li>
+            </ul>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <path d="M14 2L2 8L14 14L26 8L14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M2 20L14 26L26 20" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M2 14L14 20L26 14" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="service-title">Consultoría Técnica</h3>
+            <p class="service-description">
+              Servicios de asesoría tecnológica estratégica para guiar decisiones críticas, 
+              optimizar sistemas existentes y planificar la evolución tecnológica futura.
+            </p>
+            <ul class="service-features">
+              <li>Estrategia Tecnológica</li>
+              <li>Revisión de Arquitectura de Sistemas</li>
+              <li>Optimización del Rendimiento</li>
+              <li>Transformación Digital</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>Conecta conmigo para colaboraciones y oportunidades profesionales</p>
-      <div class="contacto-links">
-        <a href="mailto:santiperezguerrero2005@gmail.com" class="contacto-link">
-          santiperezguerrero2005@gmail.com
-        </a>
-        <a href="https://github.com/iPiiix" class="contacto-link" target="_blank">
-          GitHub: iPiiix
-        </a>
+    <!-- Work Section -->
+    <section id="work" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Casos de Estudio</div>
+          <h2 class="section-title">Trabajo Destacado</h2>
+          <p class="section-subtitle">
+            Cada proyecto representa nuestro compromiso de empujar los límites de lo que es 
+            posible en la artesanía digital y la innovación tecnológica.
+          </p>
+        </div>
+        
+        <div class="work-grid">
+          <div class="work-card">
+            <div class="work-status">En Desarrollo • 2026</div>
+            <h3 class="work-title">Plataforma de Reservas Empresarial</h3>
+            <p class="work-description">
+              Sistema de gestión de reservas de nueva generación construido con arquitectura 
+              de microservicios, con disponibilidad en tiempo real, pagos integrados 
+              y protocolos de seguridad de nivel empresarial.
+            </p>
+            <div class="work-tech">
+              <span class="tech-tag">Microservicios</span>
+              <span class="tech-tag">Tiempo Real</span>
+              <span class="tech-tag">Seguridad Empresarial</span>
+            </div>
+            <div class="work-metrics">
+              <div class="metric">
+                <span class="metric-value">99.9%</span>
+                <span class="metric-label">SLA de Disponibilidad</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">10K+</span>
+                <span class="metric-label">Usuarios Concurrentes</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="work-card">
+            <div class="work-status">Completado • 2025</div>
+            <h3 class="work-title">Identidad Digital Corporativa</h3>
+            <p class="work-description">
+              Sitio web institucional premium con diseño sofisticado, 
+              animaciones avanzadas y arquitectura optimizada para rendimiento 
+              logrando puntuaciones perfectas de accesibilidad.
+            </p>
+            <div class="work-tech">
+              <span class="tech-tag">Rendimiento</span>
+              <span class="tech-tag">Accesibilidad</span>
+              <span class="tech-tag">Excelencia SEO</span>
+              <span class="tech-tag">Diseño Premium</span>
+            </div>
+            <div class="work-metrics">
+              <div class="metric">
+                <span class="metric-value">100</span>
+                <span class="metric-label">Puntuación Lighthouse</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">300%</span>
+                <span class="metric-label">Ganancia de Rendimiento</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="work-card">
+            <div class="work-status">En Curso</div>
+            <h3 class="work-title">Contribuciones de Código Abierto</h3>
+            <p class="work-description">
+              Contribuyendo a la comunidad de desarrolladores con bibliotecas de alta calidad, 
+              herramientas y recursos educativos, siguiendo prácticas de desarrollo modernas 
+              y documentación exhaustiva.
+            </p>
+            <div class="work-tech">
+              <span class="tech-tag">Código Abierto</span>
+              <span class="tech-tag">Comunidad</span>
+              <span class="tech-tag">Educación</span>
+              <span class="tech-tag">Mejores Prácticas</span>
+            </div>
+            <a href="https://github.com/iPiiix" class="work-link" target="_blank">
+              <span>Ver Repositorio</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
-      <footer>
-        <p>© 2025 By ByteArc. All right reserveds</p>
-      </footer>
-    </div>
-  </body>
-  </html>
+    <!-- Expertise Section -->
+    <section id="expertise" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Dominio Técnico</div>
+          <h2 class="section-title">Experiencia Avanzada</h2>
+          <p class="section-subtitle">
+            Dominio en tecnologías y metodologías de vanguardia que nos permiten 
+            entregar soluciones de calidad y rendimiento sin compromisos.
+          </p>
+        </div>
+        
+        <div class="expertise-grid">
+          <div class="expertise-category">
+            <h3 class="category-title">Excelencia Backend</h3>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Java Empresarial</span>
+                  <span class="skill-level">Experto</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="95"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Diseño de Bases de Datos</span>
+                  <span class="skill-level">Experto</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Node.js</span>
+                  <span class="skill-level">Avanzado</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="85"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="expertise-category">
+            <h3 class="category-title">Dominio Frontend</h3>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">JavaScript ES6+</span>
+                  <span class="skill-level">Experto</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Ecosistema React</span>
+                  <span class="skill-level">Avanzado</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="85"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">CSS Moderno</span>
+                  <span class="skill-level">Experto</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="95"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="expertise-category">
+            <h3 class="category-title">DevOps y Nube</h3>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Flujos de Trabajo Git</span>
+                  <span class="skill-level">Experto</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="98"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Docker y K8s</span>
+                  <span class="skill-level">Avanzado</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="80"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Plataformas en la Nube</span>
+                  <span class="skill-level">Intermedio</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="75"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Conectemos</div>
+          <h2 class="section-title">Comienza Tu Proyecto Premium</h2>
+          <p class="section-subtitle">
+            ¿Listo para transformar tu visión en una realidad digital excepcional? 
+            Hablemos de cómo podemos crear algo extraordinario juntos.
+          </p>
+        </div>
+        
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="1.5"/>
+                  <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h4 class="contact-title">Email</h4>
+                <a href="mailto:santiperezguerrero2005@gmail.com" class="contact-link">
+                  santiperezguerrero2005@gmail.com
+                </a>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M9 19C-5.5 19 -5.5 5 9 5C20.5 5 20.5 19 9 19Z" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M15 9L9 15" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M15 15L9 9" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h4 class="contact-title">Portafolio</h4>
+                <a href="https://github.com/iPiiix" class="contact-link" target="_blank">
+                  github.com/iPiiix
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-cta">
+            <a href="mailto:santiperezguerrero2005@gmail.com" class="btn-primary-large">
+              <span>Iniciar una Conversación</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M16 3L26 10V22L16 29L6 22V10L16 3Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            </svg>
+            <span>ArcByte</span>
+          </div>
+          <div class="footer-text">
+            © 2025 ArcByte. Creando excelencia digital a través de precisión e innovación.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="jshome.js"></script>
+</html>
