@@ -57,11 +57,12 @@ class TextRotation {
   constructor() {
     this.element = document.getElementById('rotatingText');
     this.texts = [
-      'Security',
-      'Performance', 
-      'Architecture',
-      'Innovation',
-      'Scalability'
+      'Seguridad',
+      'Escalabilidad',
+      'Estrategia',
+      'Transformación Digital',
+      'Experiencia de Usuario',
+      'Desarrollo Ágil',
     ];
     this.currentIndex = 0;
     this.isRotating = false;

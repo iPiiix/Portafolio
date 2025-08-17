@@ -175,8 +175,8 @@ body {
 }
 
 @keyframes logoAppear {
-  to { opacity: 1; transform: translateY(0); }
   from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes logoRotate {
@@ -185,16 +185,17 @@ body {
 }
 
 @keyframes textAppear {
-  to { opacity: 1; transform: translateY(0); }
   from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes progressAppear {
-  to { opacity: 1; }
   from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes loadingProgress {
+  from { width: 0%; }
   to { width: 100%; }
 }
 
@@ -251,8 +252,14 @@ body {
 }
 
 @keyframes float {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.1; }
-  50% { transform: translate(50px, -30px) rotate(180deg); opacity: 0.3; }
+  0%, 100% { 
+    transform: translate(0, 0) rotate(0deg); 
+    opacity: 0.1; 
+  }
+  50% { 
+    transform: translate(50px, -30px) rotate(180deg); 
+    opacity: 0.3; 
+  }
 }
 
 /* === PREMIUM NAVIGATION === */
@@ -677,6 +684,7 @@ body {
 .services-grid {
   display: grid;
   gap: var(--space-8);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 /* === SERVICE CARDS - CORREGIDO === */
@@ -685,16 +693,14 @@ body {
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: var(--space-12);
-  /* FIX: Transiciones específicas para evitar efectos no deseados */
-  transition: 
-    transform var(--transition-slow),
-    border-color var(--transition-slow),
-    box-shadow var(--transition-slow);
+  transition: all var(--transition-slow);
   position: relative;
   backdrop-filter: blur(20px);
   overflow: hidden;
-  /* FIX: Asegurar que no haya rotación */
-  transform: translateZ(0) rotate(0deg);
+  /* Optimizaciones de rendimiento */
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .service-card.featured {
@@ -702,6 +708,7 @@ body {
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, var(--surface) 100%);
 }
 
+/* Efecto de barrido al hover */
 .service-card::after {
   content: '';
   position: absolute;
@@ -709,15 +716,13 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  /* FIX: Gradiente más compatible */
   background: linear-gradient(90deg, 
-    rgba(59, 130, 246, 0), 
+    transparent, 
     rgba(59, 130, 246, 0.05), 
-    rgba(59, 130, 246, 0)
+    transparent
   );
   transition: left 0.8s var(--ease-out-cubic);
-  /* FIX: Asegurar que esté detrás del contenido */
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -726,10 +731,15 @@ body {
 }
 
 .service-card:hover {
-  /* FIX: Solo movimiento vertical, SIN rotación */
-  transform: translateY(-4px) translateZ(0) rotate(0deg);
+  transform: translateY(-4px);
   border-color: var(--primary);
   box-shadow: var(--shadow-2xl);
+}
+
+/* Asegurar que el contenido esté por encima del efecto */
+.service-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .service-header {
@@ -737,9 +747,6 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: var(--space-8);
-  /* FIX: Asegurar que esté por encima del pseudo-elemento */
-  position: relative;
-  z-index: 1;
 }
 
 .service-icon {
@@ -751,13 +758,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* FIX: Transiciones específicas */
-  transition: 
-    background var(--transition-normal),
-    border-color var(--transition-normal),
-    transform var(--transition-normal);
-  /* FIX: Prevenir rotación no deseada */
-  transform: scale(1) rotate(0deg);
+  transition: all var(--transition-normal);
 }
 
 .service-icon svg {
@@ -768,8 +769,7 @@ body {
 .service-card:hover .service-icon {
   background: var(--primary);
   border-color: var(--primary);
-  /* FIX: Solo escala, SIN rotación */
-  transform: scale(1.1) rotate(0deg);
+  transform: scale(1.1);
 }
 
 .service-card:hover .service-icon svg {
@@ -786,9 +786,6 @@ body {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  /* FIX: Asegurar posición relativa */
-  position: relative;
-  z-index: 1;
 }
 
 .service-title {
@@ -796,9 +793,6 @@ body {
   font-weight: 600;
   margin-bottom: var(--space-4);
   color: var(--text-primary);
-  /* FIX: Asegurar que esté por encima del pseudo-elemento */
-  position: relative;
-  z-index: 1;
 }
 
 .service-description {
@@ -806,17 +800,11 @@ body {
   line-height: 1.7;
   margin-bottom: var(--space-6);
   font-size: 1.05rem;
-  /* FIX: Asegurar posición relativa */
-  position: relative;
-  z-index: 1;
 }
 
 .service-features {
   list-style: none;
   margin-top: var(--space-6);
-  /* FIX: Asegurar posición relativa */
-  position: relative;
-  z-index: 1;
 }
 
 .service-features li {
@@ -835,44 +823,10 @@ body {
   font-weight: 600;
 }
 
-/* FIX: Añadir regla específica para prevenir rotaciones no deseadas */
-.service-card,
-.service-card *,
-.service-card::before,
-.service-card::after {
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
-
-/* FIX: Estado de reposo explícito */
-.service-card:not(:hover) {
-  transform: translateY(0) translateZ(0) rotate(0deg);
-}
-
-.service-card:not(:hover) .service-icon {
-  transform: scale(1) rotate(0deg);
-}
-
-/* FIX: Mejorar rendimiento */
-.service-card {
-  will-change: transform;
-  contain: layout style paint;
-}
-
-/* FIX: Para debugging - añade esta regla temporalmente para identificar rotaciones */
-/*
-.service-card {
-  outline: 1px solid red !important;
-}
-.service-card:hover {
-  outline: 1px solid green !important;
-}
-*/
-
 /* === WORK GRID - CORREGIDO === */
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* FIX: Definir columnas */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: var(--space-8);
 }
 
@@ -881,19 +835,26 @@ body {
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: var(--space-12);
-  /* FIX: Transición específica para mejor rendimiento */
-  transition: 
-    transform var(--transition-slow),
-    border-color var(--transition-slow),
-    box-shadow var(--transition-slow);
+  transition: all var(--transition-slow);
   position: relative;
   backdrop-filter: blur(20px);
+  /* Optimizaciones de rendimiento */
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .work-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px);
   border-color: var(--primary);
   box-shadow: var(--shadow-2xl);
+}
+
+.work-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-8);
 }
 
 .work-status {
@@ -917,14 +878,13 @@ body {
   line-height: 1.7;
   margin-bottom: var(--space-6);
   font-size: 1.05rem;
-} /* FIX: Eliminar espacio extra */
+}
 
 .work-tech {
   display: flex;
   gap: var(--space-2);
   flex-wrap: wrap;
   margin-bottom: var(--space-8);
-  /* FIX: Añadir overflow para scroll horizontal si es necesario */
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -932,55 +892,6 @@ body {
 
 .work-tech::-webkit-scrollbar {
   display: none;
-}
-
-/* FIX: Añadir responsive design que faltaba */
-@media (max-width: 768px) {
-  .work-grid {
-    grid-template-columns: 1fr; /* Una columna en móviles */
-  }
-  
-  .work-card {
-    padding: var(--space-8); /* Menos padding en móviles */
-  }
-  
-  .work-title {
-    font-size: 1.5rem; /* Título más pequeño */
-  }
-}
-
-@media (max-width: 480px) {
-  .work-grid {
-    gap: var(--space-6); /* Menor gap en pantallas muy pequeñas */
-  }
-  
-  .work-card {
-    padding: var(--space-6);
-    border-radius: 16px; /* Border radius más pequeño */
-  }
-  
-  .work-description {
-    font-size: 1rem; /* Texto más pequeño */
-  }
-}
-
-/* FIX: Mejoras de rendimiento */
-.work-card {
-  contain: layout style paint; /* Optimizar repaint */
-  will-change: transform; /* Preparar para animaciones */
-}
-
-/* FIX: Estado de focus para accesibilidad */
-.work-card:focus-within {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-}
-
-/* FIX: Evitar problemas con backdrop-filter en navegadores no compatibles */
-@supports not (backdrop-filter: blur(20px)) {
-  .work-card {
-    background: var(--bg-secondary);
-  }
 }
 
 .tech-tag {
@@ -991,6 +902,7 @@ body {
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .work-metrics {
@@ -1246,7 +1158,24 @@ body {
   transform: translateY(0);
 }
 
+@keyframes skillProgress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
 /* === RESPONSIVE DESIGN === */
+@media (max-width: 1200px) {
+  .principles-grid,
+  .services-grid,
+  .work-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  
+  .expertise-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   :root {
     --space-8: 1.5rem;
@@ -1289,6 +1218,15 @@ body {
   .hero-actions {
     flex-direction: column;
     gap: var(--space-4);
+  }
+
+  .hero-rotating {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .rotating-text {
+    text-align: center;
   }
 
   .container {
@@ -1339,6 +1277,7 @@ body {
 
   .work-metrics {
     justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
@@ -1355,15 +1294,6 @@ body {
     gap: var(--space-4);
   }
 
-  .hero-rotating {
-    flex-direction: column;
-    gap: var(--space-2);
-  }
-
-  .rotating-text {
-    text-align: center;
-  }
-
   .work-metrics {
     flex-direction: column;
     gap: var(--space-4);
@@ -1376,12 +1306,51 @@ body {
   .expertise-category {
     min-width: auto;
   }
+
+  .work-grid,
+  .services-grid {
+    gap: var(--space-6);
+  }
+
+  .work-card,
+  .service-card {
+    padding: var(--space-6);
+    border-radius: 16px;
+  }
+
+  .work-title,
+  .service-title {
+    font-size: 1.5rem;
+  }
+
+  .work-description,
+  .service-description {
+    font-size: 1rem;
+  }
 }
 
-/* === SCROLL ANIMATIONS === */
-@keyframes skillProgress {
-  from { width: 0; }
-  to { width: 100%; }
+/* === FOCUS STATES PARA ACCESIBILIDAD === */
+.service-card:focus-within,
+.work-card:focus-within,
+.principle-card:focus-within,
+.contact-item:focus-within {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* === FALLBACKS PARA NAVEGADORES NO COMPATIBLES === */
+@supports not (backdrop-filter: blur(20px)) {
+  .service-card,
+  .work-card,
+  .principle-card,
+  .expertise-category,
+  .contact-item {
+    background: var(--bg-secondary);
+  }
+  
+  .nav-premium {
+    background: rgba(0, 0, 0, 0.95);
+  }
 }
 
 /* === UTILITY CLASSES === */
@@ -1406,6 +1375,13 @@ body {
   transform: translateY(-4px);
 }
 
+/* === MEJORAS DE RENDIMIENTO === */
+.service-card,
+.work-card,
+.principle-card {
+  contain: layout style paint;
+}
+
 /* === ACCESSIBILITY === */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -1415,6 +1391,25 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  
+  .loading-screen {
+    transition: none;
+  }
+  
+  .main-content {
+    transition: none;
+  }
+  
+  .hero-badge,
+  .hero-title,
+  .hero-description,
+  .hero-rotating,
+  .hero-actions,
+  .hero-stats {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* === HIGH CONTRAST MODE === */
@@ -1422,6 +1417,8 @@ body {
   :root {
     --border: rgba(255, 255, 255, 0.3);
     --border-light: rgba(255, 255, 255, 0.5);
+    --text-secondary: #E2E8F0;
+    --text-tertiary: #CBD5E1;
   }
 }
 
@@ -1432,7 +1429,8 @@ body {
   .btn-primary,
   .btn-secondary,
   .btn-primary-small,
-  .btn-primary-large {
+  .btn-primary-large,
+  .bg-geometry {
     display: none !important;
   }
 
@@ -1444,5 +1442,11 @@ body {
   .hero,
   .section {
     page-break-inside: avoid;
+  }
+  
+  .service-card,
+  .work-card,
+  .principle-card {
+    break-inside: avoid;
   }
 }
