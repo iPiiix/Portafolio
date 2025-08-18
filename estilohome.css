@@ -524,13 +524,6 @@ body {
   text-align: center;
 }
 
-.stat-number {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: var(--space-1);
-}
-
 .stat-label {
   font-size: 0.9rem;
   color: var(--text-tertiary);

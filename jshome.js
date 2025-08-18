@@ -462,7 +462,7 @@ class PerformanceMonitor {
   }
 
   init() {
-    if (process.env.NODE_ENV === 'development') {
+    if (typeof process !== 'undefined' && process.env && process.env.NODE_ENV === 'development') {
       this.startMonitoring();
     }
   }
@@ -566,7 +566,7 @@ class App {
     new AccessibilityEnhancements().init();
     
     // Development only
-    if (process.env.NODE_ENV === 'development') {
+    if (typeof process !== 'undefined' && process.env && process.env.NODE_ENV === 'development') {
       new PerformanceMonitor().init();
     }
     
